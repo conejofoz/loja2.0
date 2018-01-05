@@ -27,7 +27,7 @@ class Language{
         $text = $word;
         
         if(isset($this->ini[$word])){
-            $text = $this->ini['$word'];
+            $text = $this->ini[$word];
         }
         
         /*----------  verifica o tipo de retorno - se vai ser return ou echo  ----------*/

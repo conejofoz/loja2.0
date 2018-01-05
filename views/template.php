@@ -13,19 +13,19 @@
 			<div class="container">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="<?php echo BASE_URL; ?>"><?php $this->lang->get('HOME'); ?></a></li>
-					<li><a href="<?php echo BASE_URL; ?>contact">Contact</a></li>
+					<li><a href="<?php echo BASE_URL; ?>contact"><?php $this->lang->get('CONTACT'); ?></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#">English
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('LANGUAGE'); ?>
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">English</a></li>
-							<li><a href="#">Português</a></li>
-							<li><a href="#">Espanhol</a></li>
+							<li><a href="<?php echo BASE_URL; ?>lang/set/en">English</a></li>
+							<li><a href="<?php echo BASE_URL; ?>lang/set/pt-br">Português</a></li>
+							<li><a href="<?php echo BASE_URL; ?>lang/set/es">Espanhol</a></li>
 						</ul>
 					</li>
-					<li><a href="<?php echo BASE_URL; ?>login">Login</a></li>
+					<li><a href="<?php echo BASE_URL; ?>login"><?php $this->lang->get('LOGIN'); ?></a></li>
 				</ul>
 			</div>
 		</nav>
@@ -41,9 +41,9 @@
 						
 						<div class="search_area">
 							<form method="GET">
-								<input type="text" name="s" required placeholder="Procure um item" />
+								<input type="text" name="s" required placeholder="<?php $this->lang->get('SEARCHFORANITEM'); ?>" />
 								<select name="category">
-									<option value="">Todas as Categorias</option>
+									<option value=""><?php $this->lang->get('ALLCATEGORIES'); ?></option>
 								</select>
 								<input type="submit" value="" />
 						    </form>
@@ -56,7 +56,7 @@
 									<div class="cartqt">9</div>
 								</div>
 								<div class="carttotal">
-									Seu Carrinho:<br/>
+									<?php $this->lang->get('CART'); ?>:<br/>
 									<span>R$ 999,99</span>
 								</div>
 							</div>
@@ -70,7 +70,7 @@
 				<div class="container">
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
-					        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Selecione Uma Categoria
+					        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php $this->lang->get('SELECTCATEGORY'); ?>
 					        <span class="caret"></span></a>
 					        <ul class="dropdown-menu">
 					          <li><a href="#">Page 1-1</a></li>
@@ -88,13 +88,13 @@
 				<div class="row">
 				  <div class="col-sm-3">
 				  	<aside>
-				  		<h1>Filtro</h1>
+				  		<h1><?php $this->lang->get('FILTER'); ?></h1>
 				  		<div class="filterarea">
 
 				  		</div>
 
 				  		<div class="widget">
-				  			<h1>Featured Products</h1>
+				  			<h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
 				  			<div class="widget_body">
 				  				...
 				  			</div>
@@ -110,7 +110,7 @@
 	    		<div class="row">
 				  <div class="col-sm-4">
 				  	<div class="widget">
-			  			<h1>Featured Products</h1>
+			  			<h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
 			  			<div class="widget_body">
 			  				...
 			  			</div>
@@ -118,7 +118,7 @@
 				  </div>
 				  <div class="col-sm-4">
 				  	<div class="widget">
-			  			<h1>On-Sale Products</h1>
+			  			<h1><?php $this->lang->get('ONSALEPRODUCTS'); ?></h1>
 			  			<div class="widget_body">
 			  				...
 			  			</div>
@@ -126,7 +126,7 @@
 				  </div>
 				  <div class="col-sm-4">
 				  	<div class="widget">
-			  			<h1>Top Rated Products</h1>
+			  			<h1><?php $this->lang->get('TOPRATEDPRODUCTS'); ?></h1>
 			  			<div class="widget_body">
 			  				...
 			  			</div>
@@ -139,8 +139,8 @@
 	    			<div class="row">
 						<div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
 							<form method="POST">
-                                <input class="subemail" name="email" placeholder="Subscribe to our newsletter">
-                                <input type="submit" value="Subscribe" />
+                                <input class="subemail" name="email" placeholder="<?php $this->lang->get('SUBSCRIBETEXT'); ?>">
+                                <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON'); ?>" />
                             </form>
 						</div>
 					</div>
@@ -157,7 +157,7 @@
 						<div class="col-sm-8 linkgroups">
 							<div class="row">
 								<div class="col-sm-4">
-									<h3>Categorias</h3>
+									<h3><?php $this->lang->get('CATEGORIES'); ?></h3>
 									<ul>
 										<li><a href="#">Categoria X</a></li>
 										<li><a href="#">Categoria X</a></li>
@@ -168,7 +168,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-4">
-									<h3>Information</h3>
+									<h3><?php $this->lang->get('INFORMATION'); ?></h3>
 									<ul>
 										<li><a href="#">Menu 1</a></li>
 										<li><a href="#">Menu 2</a></li>
@@ -179,7 +179,7 @@
 									</ul>
 								</div>
 								<div class="col-sm-4">
-									<h3>Information</h3>
+									<h3><?php $this->lang->get('INFORMATION'); ?></h3>
 									<ul>
 										<li><a href="#">Menu 1</a></li>
 										<li><a href="#">Menu 2</a></li>
@@ -197,7 +197,7 @@
 	    	<div class="copyright">
 	    		<div class="container">
 	    			<div class="row">
-						<div class="col-sm-6">© <span>Loja 2.0</span> - Todos os direitos reservados.</div>
+						<div class="col-sm-6">© <span>Loja 2.0</span> - <?php $this->lang->get('ALLRIGHTRESERVED'); ?>.</div>
 						<div class="col-sm-6">
 							<div class="payments">
 								<img src="<?php echo BASE_URL; ?>assets/images/visa.png" />
