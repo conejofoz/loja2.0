@@ -12,7 +12,7 @@
 		<nav class="navbar topnav">
 			<div class="container">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="<?php echo BASE_URL; ?>">Home</a></li>
+					<li class="active"><a href="<?php echo BASE_URL; ?>"><?php $this->lang->get('HOME'); ?></a></li>
 					<li><a href="<?php echo BASE_URL; ?>contact">Contact</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
