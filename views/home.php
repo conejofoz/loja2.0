@@ -1,11 +1,21 @@
 <div class="row">
-    <div class="col-sm-4">
-        <?php $this->loadView('product_item', array()) ;?>
-    </div>
-    <div class="col-sm-4">
-        ...
-    </div>
-    <div class="col-sm-4">
-        ...
-    </div>
+    <?php
+    $a = 0;
+    ?>
+    <?php foreach ($list as $product_item): ?>
+        <div class="col-sm-4">
+            <?php $this->loadView('product_item', $product_item); ?>
+        </div>
+        <?php
+        if ($a >= 2) {
+            $a = 0;
+            echo '</div><div class="row">';
+        } else {
+            $a++;
+        }
+        ?>
+    <?php endforeach; ?>
 </div>
+
+
+
