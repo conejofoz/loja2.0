@@ -366,3 +366,6 @@ footer h3 {
 .paginationArea{
     margin-top: 30px;
 }
+.dropdown-menu{
+    width: 100%;
+}
