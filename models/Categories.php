@@ -11,14 +11,59 @@ class Categories extends Model{
                 $array[$item['id']] = $item;
             }
             
+            //echo '<pre>';
+            //print_r($array);
+            //exit;
+            
             while($this->stillNeed($array)){
                 $this->organizeCategory($array);
             }
         }
         
-        
-        
+        //echo '<pre>';
+        //print_r($array);
+        //exit;
         return $array;
+    }
+    
+    
+    
+    public function getCategoryTree($id){
+        $array = array();
+        
+        $haveChild = true;
+        
+        while ($haveChild){
+            $sql = "SELECT * FROM categories WHERE id = :id";
+            $sql = $this->db->prepare($sql);
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+            if($sql->rowCount() > 0){
+                $sql = $sql->fetch();
+                $array[] = $sql;
+                if(!empty($sql['sub'])){
+                    $id = $sql['sub'];
+                } else {
+                    $haveChild = false;
+                }
+            }
+        }
+        $array = array_reverse($array);
+        return $array;
+    }
+    
+    
+    
+    public function getCategoryName($id){
+        $sql = "SELECT * FROM categories WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $sql = $sql->fetch();
+            return $sql['name'];
+        }
+        
     }
     
     
@@ -30,6 +75,7 @@ class Categories extends Model{
         }
         return false;
     }
+    
     
     
     private function organizeCategory(&$array){
