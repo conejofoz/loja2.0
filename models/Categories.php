@@ -55,7 +55,7 @@ class Categories extends Model{
     
     
     public function getCategoryName($id){
-        $sql = "SELECT * FROM categories WHERE id = :id";
+        $sql = "SELECT name FROM categories WHERE id = :id";
         $sql = $this->db->prepare($sql);
         $sql->bindValue(":id", $id);
         $sql->execute();

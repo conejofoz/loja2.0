@@ -1,6 +1,6 @@
 <?php foreach ($subs as $sub): ?>
     <li>
-        <a href="<?php BASE_URL . 'categories/enter/' . $sub['id']; ?>">
+        <a href="<?php echo BASE_URL . 'categories/enter/' . $sub['id']; ?>">
             <?php
             for ($q=0;$q<$level;$q++) echo '-- ';
             echo $sub['name'];

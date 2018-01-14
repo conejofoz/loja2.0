@@ -13,7 +13,7 @@
 
         </div>
         <div class="product_image">
-            <img src="<?php BASE_URL; ?>media/products/<?php echo $images[0]['url'] ;?>" width="100%" />
+            <img src="<?php echo BASE_URL; ?>media/products/<?php echo $images[0]['url'] ;?>" width="100%" />
         </div>
         <div class="product_name"><?php echo $name;?></div>
         <div class="product_brand"><?php echo $brand_name;?></div>
