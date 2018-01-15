@@ -6,7 +6,7 @@
  * @copyright (c) 2018, Silvio Coelho 
  */
 class Filters extends Model {
-    public function getFilters(){
+    public function getFilters($filters){
         $products = new Products();
         $brands = new Brands();
         $array = array(
@@ -18,7 +18,7 @@ class Filters extends Model {
         );
         
         $array['brands'] = $brands->getList();
-        $brand_products = $products->getListOfBrands();
+        $brand_products = $products->getListOfBrands($filters);
         
         foreach ($array['brands'] as $bkey => $bitem){
             
@@ -29,7 +29,9 @@ class Filters extends Model {
                     $array['brands'][$bkey]['count'] = $bproduct['c'];
                 }
             }
-            
+            if($array['brands'][$bkey]['count']=='0'){
+                unset($array['brands'][$bkey]);
+            }
         }
         
         

@@ -12,6 +12,7 @@ class homeController extends controller {
         $products = new Products();
         $categories = new Categories();
         $f = new Filters();
+        $filters = array();
         $currentPage = 1;
         $offset = 0;
         $limit = 3;
@@ -24,7 +25,7 @@ class homeController extends controller {
         $dados['numberOfPages'] = ceil($dados['totalItens']/$limit);
         $dados['currentPage'] = $currentPage;
         $dados['categories'] = $categories->getList();
-        $dados['filters'] = $f->getFilters();
+        $dados['filters'] = $f->getFilters($filters);
         $this->loadTemplate('home', $dados);
     }
 
