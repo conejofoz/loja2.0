@@ -100,5 +100,17 @@ class Products extends Model{
         $sql = $sql->fetch();
         return $sql['c'];
     }
+    
+    
+    
+    public function getListOfBrands(){
+        $array = array();
+        $sql = "SELECT id_brand, COUNT(id) as c FROM products GROUP BY id_brand";
+        $sql = $this->db->query($sql);
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+        return $array;
+    }
 }
 
