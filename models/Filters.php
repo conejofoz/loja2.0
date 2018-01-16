@@ -62,6 +62,10 @@ class Filters extends Model {
         $array['sale'] = $products->getSaleCount($filters);
         
         
+        //criando filtro das opcoes
+        $array['options'] = $products->getAvailableOptions($filters);
+        
+        
         return $array;
     }
 }
