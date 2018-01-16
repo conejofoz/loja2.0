@@ -128,5 +128,67 @@ class Products extends Model{
            $sql->bindValue(":id_category", $filters['category']); 
         }
     }
+    
+    
+    public function getMaxPrice($filters = array()){
+        $where = $this->buildWhere($filters);
+        $sql = "SELECT"
+                . " price"
+                . " FROM products"
+                . " WHERE ".implode(' AND ', $where)
+                . " ORDER BY price DESC LIMIT 1";
+        $sql = $this->db->prepare($sql);
+        $this->bindWhere($filters, $sql);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $sql = $sql->fetch();
+            return $sql['price'];
+        } else {
+            return '0';
+        }
+    }
+    
+    
+    
+    
+    public function getListOfStars($filters){
+        $array = array();
+        
+        $where = $this->buildWhere($filters);
+        
+        $sql = "SELECT"
+                . " rating,"
+                . " COUNT(id) as c"
+                . " FROM products"
+                . " WHERE ".  implode(' AND ', $where)
+                . " GROUP BY rating";
+        $sql = $this->db->prepare($sql);
+        $this->bindWhere($filters, $sql);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+        return $array;
+    }
+    
+    
+    
+    public function getSaleCount($filters = array()){
+        $where = $this->buildWhere($filters);
+        $where[] = 'sale = "1"';
+        $sql = "SELECT"
+                . " COUNT(*) as c"
+                . " FROM products"
+                . " WHERE ".implode(' AND ', $where);
+        $sql = $this->db->prepare($sql);
+        $this->bindWhere($filters, $sql);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $sql = $sql->fetch();
+            return $sql['c'];
+        } else {
+            return '0';
+        }
+    }
 }
 
