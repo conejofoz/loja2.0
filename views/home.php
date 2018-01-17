@@ -20,7 +20,11 @@
 <div class="paginationArea">
     <?php for ($q = 1; $q <= $numberOfPages; $q++): ?>
         <div class="paginationItem <?php echo ($currentPage == $q) ? 'pag_active' : ''; ?>">
-            <a href="<?php echo BASE_URL; ?>?p=<?php echo $q; ?>">
+            <a href="<?php echo BASE_URL; ?>?<?php 
+            $pag_array = $_GET;
+            $pag_array['p'] = $q;
+            echo http_build_query($pag_array);
+                    ?>">
                 <?php echo $q; ?>
             </a>
         </div>
