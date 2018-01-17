@@ -23,8 +23,8 @@ class homeController extends controller {
             $currentPage = $_GET['p'];
         }
         $offset = ($currentPage * $limit) - $limit;
-        $dados['list'] = $products->getList($offset, $limit);
-        $dados['totalItens'] = $products->getTotal();
+        $dados['list'] = $products->getList($offset, $limit, $filters);
+        $dados['totalItens'] = $products->getTotal($filters);
         $dados['numberOfPages'] = ceil($dados['totalItens']/$limit);
         $dados['currentPage'] = $currentPage;
         $dados['categories'] = $categories->getList();
