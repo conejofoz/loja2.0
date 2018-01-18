@@ -36,17 +36,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-2 logo">
-                        <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>assets/images/logo.png" /></a>
+                        <a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>assets/images/logo2.jpg" /></a>
                     </div>
                     <div class="col-sm-7">
-                        <div class="head_help">(11) 9999-9999</div>
-                        <div class="head_email">contato@<span>loja2.com.br</span></div>
+                        <div class="head_help">(595) 061 512216</div>
+                        <div class="head_email">infinity@<span>infinity-group.net</span></div>
 
                         <div class="search_area">
-                            <form method="GET">
-                                <input type="text" name="s" required placeholder="<?php $this->lang->get('SEARCHFORANITEM'); ?>" />
+                            <form action="<?php echo BASE_URL;?>busca" method="GET">
+                                <input type="text" name="s" value="<?php echo (!empty($viewData['searchTerm']))?$viewData['searchTerm']:'';?>" required placeholder="<?php $this->lang->get('SEARCHFORANITEM'); ?>" />
                                 <select name="category">
                                     <option value=""><?php $this->lang->get('ALLCATEGORIES'); ?></option>
+                                    <?php foreach ($viewData['categories'] as $cat): ?>
+                                    <option <?php echo ($viewData['category']==$cat['id'])?'selected="selected"':'' ;?> value="<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></option>
+                                    
+                                    <?php
+                                    if (count($cat['subs']) > 0) {
+                                        $this->loadView('search_subcategory', array(
+                                            'subs' => $cat['subs'],
+                                            'level' => 1,
+                                            'category' => $viewData['category']
+                                        ));
+                                    }
+                                    ;
+                                    ?>
+                                <?php endforeach; ?>
+                                    
+                                    
+                                    
                                 </select>
                                 <input type="submit" value="" />
                             </form>
