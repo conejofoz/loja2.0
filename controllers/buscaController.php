@@ -37,6 +37,7 @@ class buscaController extends controller {
                 $currentPage = $_GET['p'];
             }
             $offset = ($currentPage * $limit) - $limit;
+            
             $dados['list'] = $products->getList($offset, $limit, $filters);
             $dados['totalItens'] = $products->getTotal($filters);
             $dados['numberOfPages'] = ceil($dados['totalItens'] / $limit);
