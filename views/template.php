@@ -258,7 +258,7 @@
                             <div class="widget">
                                 <h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
                                 <div class="widget_body">
-                                    <?php $this->loadView('widget_item', array('list'=>$viewData['widget_featured1'])) ;?>
+                                    <?php $this->loadView('widget_item', array('list' => $viewData['widget_featured1'])); ?>
                                 </div>
                             </div>
                         </aside>
@@ -274,7 +274,7 @@
                         <div class="widget">
                             <h1><?php $this->lang->get('FEATUREDPRODUCTS'); ?></h1>
                             <div class="widget_body">
-                                <?php $this->loadView('widget_item', array('list'=>$viewData['widget_featured2'])) ;?>
+                                <?php $this->loadView('widget_item', array('list' => $viewData['widget_featured2'])); ?>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                         <div class="widget">
                             <h1><?php $this->lang->get('ONSALEPRODUCTS'); ?></h1>
                             <div class="widget_body">
-                                <?php $this->loadView('widget_item', array('list'=>$viewData['widget_sale'])) ;?>
+                                <?php $this->loadView('widget_item', array('list' => $viewData['widget_sale'])); ?>
                             </div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                         <div class="widget">
                             <h1><?php $this->lang->get('TOPRATEDPRODUCTS'); ?></h1>
                             <div class="widget_body">
-                                <?php $this->loadView('widget_item', array('list'=>$viewData['widget_toprated'])) ;?>
+                                <?php $this->loadView('widget_item', array('list' => $viewData['widget_toprated'])); ?>
                             </div>
                         </div>
                     </div>
@@ -300,10 +300,26 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
-                            <form method="POST">
-                                <input class="subemail" name="email" placeholder="<?php $this->lang->get('SUBSCRIBETEXT'); ?>">
-                                <input type="submit" value="<?php $this->lang->get('SUBSCRIBEBUTTON'); ?>" />
-                            </form>
+
+
+                            <!-- Begin MailChimp Signup Form -->
+                            <div id="mc_embed_signup">
+                                <form action="https://infinity-group.us17.list-manage.com/subscribe/post?u=8e6d0b74c921ad8016ebb9fad&amp;id=2530d54ab3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate>
+
+
+                                    <input type="email" value="" name="EMAIL" class="subemail required email" id="mce-EMAIL" placeholder="<?php $this->lang->get('SUBSCRIBETEXT'); ?>">
+
+                                    <input type="hidden" name="b_8e6d0b74c921ad8016ebb9fad_2530d54ab3" tabindex="-1" value="">
+                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="<?php $this->lang->get('SUBSCRIBEBUTTON'); ?>">
+
+                                </form>
+                            </div>
+
+                            <!--End mc_embed_signup-->
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -312,9 +328,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
-                            <a href="<?php echo BASE_URL; ?>"><img width="150" src="<?php echo BASE_URL; ?>assets/images/logo.png" /></a><br/><br/>
-                            <strong>Slogan da Loja Virtual</strong><br/><br/>
-                            Endereço da Loja Virtual
+                            <a href="<?php echo BASE_URL; ?>"><img width="150" src="<?php echo BASE_URL; ?>assets/images/logo2.jpg" /></a><br/><br/>
+                            <strong>Presentes Finos</strong><br/><br/>
+                            Av. San Blás, 136 - Ciudad del Este
                         </div>
                         <div class="col-sm-8 linkgroups">
                             <div class="row">
