@@ -10,5 +10,12 @@
         <?php endif; ?>
         <hr>
         <p><?php echo $product_info['description']; ?></p>
+        <hr>
+        De:<span class="price_from">$ <?php echo number_format($product_info['price_from'],2); ?></span><br/>
+        Por:<span class="original_price">$ <?php echo number_format($product_info['price'],2); ?></span>
+        <form method="POST" class="addtocartform">
+            <button data-action="decrease">-</button><input type="text" name="qt" value="1" class="addtocart_qt" disabled /><button data-action="increase">+</button>
+            <input class="addtocart_submit" type="submit" value="<?php $this->lang->get('ADD_TO_CART') ;?>" />
+        </form>
     </div> 
 </div>
