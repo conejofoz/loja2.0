@@ -1,5 +1,17 @@
 <div class="row">
-    <div class="col-sm-5"></div> 
+    <div class="col-sm-5">
+        <div class="mainphoto">
+            <img src="<?php echo BASE_URL;?>media/products/<?php echo $product_images[0]['url'] ;?>" />
+        </div>
+        <div class="galery">
+            <?php foreach ($product_images as $img):?>
+            <div class="photo_item">
+                <img src="<?php echo BASE_URL;?>/media/products/<?php echo $img['url'] ;?>" />
+            </div>
+            
+            <?php endforeach;?>
+        </div>
+    </div> 
     <div class="col-sm-7">
         <h2><?php echo $product_info['name']; ?></h2>
         <small><?php echo $product_info['brand_name']; ?></small>
