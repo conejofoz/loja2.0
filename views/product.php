@@ -31,3 +31,24 @@
         </form>
     </div> 
 </div>
+<hr>
+<div class="row">
+    <div class="col-sm-6">
+        <h3><?php echo $this->lang->get('PRODUCT_SPECIFICATIONS');?></h3>
+        <?php foreach ($product_options as $po):?>
+        <strong><?php echo $po['name'];?></strong>: <?php echo $po['value'];?><br/>
+        <?php endforeach;?>
+    </div>
+    <div class="col-sm-6">
+        <h3><?php echo $this->lang->get('PRODUCT_REVIEWS');?></h3>
+        <?php foreach ($product_rates as $rate):?>
+        <strong><?php echo $rate['user_name'];?></strong> - 
+        <?php for($q=0;$q<intval($rate['points']);$q++):?>
+        <img src="<?php echo BASE_URL; ?>/assets/images/star.png" border="0" height="15px">
+        <?php endfor;?>
+        <br/>
+        "<?php echo $rate['comment'];?>"
+        <hr/>
+        <?php endforeach;?>
+    </div>
+</div>
