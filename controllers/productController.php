@@ -18,12 +18,12 @@ class productController extends Controller {
     }
 
     public function open($id) {
-        $dados = array();
+        $store = new Store();
         $products = new Products();
         $categories = new Categories();
-        $f = new Filters();
-        $filters = array();
-
+        
+        $dados = $store->getTemplateData();
+        
         $info = $products->getProductInfo($id);
         if (count($info) > 0) {
             
@@ -33,14 +33,10 @@ class productController extends Controller {
             $dados['product_rates'] = $products->getRates($id, 5);
 
 
-            $dados['categories'] = $categories->getList();
-            $dados['filters'] = $f->getFilters($filters);
-            $dados['filters_selected'] = array();
-
-            $dados['widget_featured1'] = $products->getList(0, 5, array('featured' => 1), true);
-            $dados['widget_featured2'] = $products->getList(0, 3, array('featured' => 1), true);
-            $dados['widget_sale'] = $products->getList(0, 3, array('sale' => 1), true);
-            $dados['widget_toprated'] = $products->getList(0, 3, array('toprated' => 1));
+          
+            
+            
+           
 
 
 
