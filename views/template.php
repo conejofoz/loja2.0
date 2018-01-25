@@ -258,7 +258,9 @@
         </footer>
         <script type="text/javascript">
             var BASE_URL = '<?php echo BASE_URL; ?>';
+            <?php if(isset($viewData['filters'])):?>
             var maxslider = <?php echo $viewData['filters']['maxslider']; ?>;
+            <?php endif;?>
 
         </script>
         <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
