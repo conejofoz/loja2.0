@@ -402,5 +402,18 @@ class Products extends Model {
         
         return $array;
     }
+    
+    
+    
+    public function getInfo($id){
+        $array = array();
+        $sql = "SELECT * FROM products WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            
+        }
+    }
 
 }
