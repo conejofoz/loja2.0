@@ -50,6 +50,7 @@ class cartController extends Controller {
                 $_SESSION['cart'][$id] = $qt;
             }
         }
+        //print_r($_SESSION);exit;
         header("Location: " . BASE_URL . "cart");
         exit;
     }

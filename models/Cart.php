@@ -6,6 +6,7 @@
  * @copyright (c) year, Silvio Coelho 
  */
 class Cart extends Model {
+    
     public function getList(){
         $products = new Products();
         $array = array();
@@ -17,10 +18,9 @@ class Cart extends Model {
                 'id' => $id,
                 'qt' => $qt,
                 'price' => $info['price'],
-                'name' => $info['name'],
+                'name'  => $info['name'],
                 'image' => $info['image']
             );
-            
         }
         
         return $array;
