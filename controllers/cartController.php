@@ -24,6 +24,11 @@ class cartController extends Controller {
             $cep = intval($_POST['cep']);
             
             $shipping = $cart->shippingCalculate($cep);
+            $_SESSION['shipping'] = $shipping;
+        }
+        
+        if(!empty($_SESSION['shipping'])){
+            $shipping = $_SESSION['shipping'];
         }
         
         if(!isset($_SESSION['cart']) || (isset($_SESSION['cart'])&& count($_SESSION['cart'])==0)){
@@ -45,9 +50,11 @@ class cartController extends Controller {
     
 
     public function add() {
+        unset($_SESSION['shipping']);
         if (!empty($_POST['id_product'])) {
             $id = intval($_POST['id_product']);
             $qt = intval($_POST['qt_product']);
+            
 
             if (!isset($_SESSION['cart'])) {
                 $_SESSION['cart'] = array();
@@ -68,6 +75,7 @@ class cartController extends Controller {
     public function del($id){
         if(!empty($id)){
             unset($_SESSION['cart'][$id]);
+            unset($_SESSION['shipping']);
             header("Location: ".BASE_URL."cart");
             exit;
         }
