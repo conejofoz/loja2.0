@@ -54,5 +54,14 @@ class cartController extends Controller {
         header("Location: " . BASE_URL . "cart");
         exit;
     }
+    
+    
+    public function del($id){
+        if(!empty($id)){
+            unset($_SESSION['cart'][$id]);
+            header("Location: ".BASE_URL."cart");
+            exit;
+        }
+    }
 
 }
