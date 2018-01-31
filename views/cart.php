@@ -31,3 +31,12 @@
     </tr>
         
 </table>
+
+
+<hr>
+Qual seu CEP?<br/>
+<form method="POST">
+    <input type="number" name="cep" /><br/>
+    <input type="submit" value="Calcular" /><br/>
+    
+</form>
