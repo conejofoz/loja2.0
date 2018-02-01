@@ -48,8 +48,13 @@
     </tr>
     <tr>
         <td colspan="4" style="text-align: right">Total: </td>
-        <td style="text-align: right"><strong>R$ <?php 
-        $frete = floatval(str_replace(',', '.',$shipping['price']));
+        <td style="text-align: right"><strong>R$ <?php
+        if(isset($shipping['price'])){
+            $frete = floatval(str_replace(',', '.',$shipping['price']));
+        } else {
+            $frete = 0;
+        }
+        
         $total = $subtotal + $frete;
         echo number_format($total, 2, ',', '.'); ?></strong> </td>
     </tr>
@@ -58,3 +63,13 @@
 
 
 <hr>
+
+<?php
+if($frete > 0): ?>
+<form method="POST" action="<?php echo BASE_URL ;?>cart/payment_redirect" style="float: right">
+    <select name="payment_type">
+        <option value="checkout_transparente">Pagseguro</option>
+    </select>
+    <input type="submit" value="Finalizar compra" class="button" />
+</form>
+<?php endif; ?>

@@ -470,3 +470,10 @@ footer h3 {
 .photo_item img{
     width: 90%;
 }
+.button{
+    background-color: #59b210;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0;
+    color: #FFF;
+}
