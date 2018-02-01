@@ -18,6 +18,18 @@ class psckttransparenteController extends Controller {
         $store = new Store();
         $products = new Products();
         $dados = $store->getTemplateData();
+        
+        try{
+            $sessionCode = \PagSeguro\Services\Session::create(
+            \PagSeguro\Configuration\Configure::getAccountCredentials()
+                    );
+            
+            $dados['sessionCode'] = $sessionCode->getResult();
+            
+        } catch (Exception $e) {
+            echo "Erro: ".$e->getMessage();
+
+        }
         $this->loadTemplate('cart_psckttransparente', $dados);
     }
 }
