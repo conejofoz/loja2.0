@@ -2,3 +2,51 @@
 01/02/2018 11:01:15 PagSeguro.Session[info]: Begin
 01/02/2018 11:01:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
 01/02/2018 11:01:36 PagSeguro.Session[info]: Session ID: d16187bfd3534831827d3cbc06d7aa61
+01/02/2018 11:45:59 PagSeguro.Session[info]: Begin
+01/02/2018 11:45:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:46:00 PagSeguro.Session[info]: Session ID: 8e596ec26091448a902da3b270b87dba
+01/02/2018 11:50:36 PagSeguro.Session[info]: Begin
+01/02/2018 11:50:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:50:38 PagSeguro.Session[error]: {"timestamp":"2018-02-01T13:50:24.598+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+01/02/2018 11:54:14 PagSeguro.Session[info]: Begin
+01/02/2018 11:54:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:54:15 PagSeguro.Session[info]: Session ID: 4ab3b71057b34deebe2707d4eec6147b
+01/02/2018 11:55:46 PagSeguro.Session[info]: Begin
+01/02/2018 11:55:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:55:50 PagSeguro.Session[info]: Session ID: f01b0c98c07944dd9c9e706c510fa462
+01/02/2018 11:56:44 PagSeguro.Session[info]: Begin
+01/02/2018 11:56:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:56:53 PagSeguro.Session[info]: Session ID: 18f1a17899df4298a10a87c77771d7b6
+01/02/2018 11:57:08 PagSeguro.Session[info]: Begin
+01/02/2018 11:57:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 11:57:16 PagSeguro.Session[info]: Session ID: dfe90c29b5ea42e38f2512b635249922
+01/02/2018 12:01:03 PagSeguro.Session[info]: Begin
+01/02/2018 12:01:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:01:07 PagSeguro.Session[info]: Session ID: 8085d3990b2a49bfa1a614148cca547f
+01/02/2018 12:03:41 PagSeguro.Session[info]: Begin
+01/02/2018 12:03:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:03:41 PagSeguro.Session[error]: {"timestamp":"2018-02-01T14:03:27.812+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+01/02/2018 12:04:05 PagSeguro.Session[info]: Begin
+01/02/2018 12:04:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:04:05 PagSeguro.Session[error]: {"timestamp":"2018-02-01T14:03:51.673+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+01/02/2018 12:09:15 PagSeguro.Session[info]: Begin
+01/02/2018 12:09:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:09:17 PagSeguro.Session[error]: {"timestamp":"2018-02-01T14:09:03.408+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+01/02/2018 12:19:02 PagSeguro.Session[info]: Begin
+01/02/2018 12:19:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:19:02 PagSeguro.Session[error]: {"timestamp":"2018-02-01T14:18:49.198+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+01/02/2018 12:25:22 PagSeguro.Session[info]: Begin
+01/02/2018 12:25:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:25:29 PagSeguro.Session[info]: Session ID: edfbc8e4a86f472abd16dcda0d0da303
+01/02/2018 12:25:50 PagSeguro.Session[info]: Begin
+01/02/2018 12:25:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:25:55 PagSeguro.Session[info]: Session ID: c82dcfa1d5f84b35a7a191def4a9899a
+01/02/2018 12:27:11 PagSeguro.Session[info]: Begin
+01/02/2018 12:27:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:27:11 PagSeguro.Session[info]: Session ID: e615074c468149f88df8512d09d9ae11
+01/02/2018 12:32:09 PagSeguro.Session[info]: Begin
+01/02/2018 12:32:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:32:10 PagSeguro.Session[info]: Session ID: 50cf7b870f294dafb729ecac6fd9b812
+01/02/2018 12:36:49 PagSeguro.Session[info]: Begin
+01/02/2018 12:36:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+01/02/2018 12:36:49 PagSeguro.Session[info]: Session ID: 93a734a91519403f9b2ab3cae9d39f76
