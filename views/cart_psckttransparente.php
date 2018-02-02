@@ -60,6 +60,9 @@
         <?php endfor; ?>
     </select><br/><br/>
     
+    <strong>Parcelas:</strong><br/>
+    <select name="parc"></select>
+    
     <button class="button">Efetuar Compra</button>
     
     
