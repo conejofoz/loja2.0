@@ -59,3 +59,9 @@
 01/02/2018 15:27:48 PagSeguro.Session[info]: Begin
 01/02/2018 15:27:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
 01/02/2018 15:27:49 PagSeguro.Session[error]: {"timestamp":"2018-02-01T17:27:49.683+0000","status":415,"error":"Unsupported Media Type","message":"Invalid mime type \"application/x-www-form-urlencoded; charset= UTF8\":  UTF8","path":"/v2/sessions"}
+02/02/2018 13:42:25 PagSeguro.Session[info]: Begin
+02/02/2018 13:42:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+02/02/2018 13:42:27 PagSeguro.Session[info]: Session ID: e78bef5a965a425ba32406f2dbb6dfda
+02/02/2018 13:45:23 PagSeguro.Session[info]: Begin
+02/02/2018 13:45:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+02/02/2018 13:45:24 PagSeguro.Session[info]: Session ID: 2403e48a61dc48748e15fb7de4536f6d

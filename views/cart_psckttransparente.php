@@ -40,6 +40,12 @@
     
     <h3>Informacoes de pagamento</h3>
     
+    <strong>Titular do Cartao</strong><br/>
+    <input type="text" name="cartao_titular" value=""/><br/><br/>
+    
+    <strong>CPF do titular do Cartao</strong><br/>
+    <input type="text" name="cartao_cpf" value=""/><br/><br/>
+    
     <strong>Numero do Cartao</strong><br/>
     <input type="text" name="cartao_numero" value=""/><br/><br/>
     
