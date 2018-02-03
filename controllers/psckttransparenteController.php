@@ -99,6 +99,12 @@ class psckttransparenteController extends Controller {
             }
             $total += $frete;
         }
+        
+        $id_purchase = $purchases->createPurchase($uid, $total, 'psckttransparente');
+        
+        foreach ($list as $item){
+            $purchases->addItem($id_purchase, $item['id'], $item['qt'], $item['price']);
+        }
     }
 
 }

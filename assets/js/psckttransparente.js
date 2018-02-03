@@ -64,7 +64,9 @@ $(function(){
                       },
                       dataType:'json',
                       success:function(json){
-                         
+                         if(json.error == true){
+                             alert(json.msg);
+                         }
                       },
                       error:function(){
                           

@@ -65,3 +65,17 @@
 02/02/2018 13:45:23 PagSeguro.Session[info]: Begin
 02/02/2018 13:45:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
 02/02/2018 13:45:24 PagSeguro.Session[info]: Session ID: 2403e48a61dc48748e15fb7de4536f6d
+03/02/2018 00:15:10 PagSeguro.Session[info]: Begin
+03/02/2018 00:15:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 00:15:12 PagSeguro.Session[info]: Session ID: a36b6fcfa7a74106b99e55e57ce8d185
+03/02/2018 00:17:21 PagSeguro.Session[info]: Begin
+03/02/2018 00:17:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 02:26:45 PagSeguro.Session[info]: Begin
+03/02/2018 02:26:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 02:26:46 PagSeguro.Session[info]: Session ID: e993b995c71f44a7b615d5064707f68c
+03/02/2018 02:36:46 PagSeguro.Session[info]: Begin
+03/02/2018 02:36:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 02:36:47 PagSeguro.Session[info]: Session ID: c8a9ca5ae6f14ece8092ecc8c9243832
+03/02/2018 02:41:27 PagSeguro.Session[info]: Begin
+03/02/2018 02:41:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 02:41:28 PagSeguro.Session[info]: Session ID: 13adf094d17843a1a37b21bfef85f1b1

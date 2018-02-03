@@ -78,6 +78,7 @@ class Cart extends Model {
         }
         
         $soma = $nVlComprimento + $nVlAltura + $nVlLargura;
+        //echo $soma;exit;
 
         /*
          * Verificar se a soma do comprimento, altura, largura nao ultrapassa 200
@@ -111,7 +112,7 @@ class Cart extends Model {
             'sCepDestino' => $cepDestination,
             'nVlPeso' => $nVlPeso,
             'nCdFormato' => '1',
-            'nVlComprimento' => $nVlComprimento,
+            'nVlComprimento' => $nVlComprimento, //minimo 16cm
             'nVlAltura' => $nVlAltura,
             'nVlLargura' => $nVlLargura,
             'nVlDiametro' => $nVlDiametro,
@@ -120,6 +121,7 @@ class Cart extends Model {
             'sCdAvisoRecebimento' => 'N',
             'StrRetorno' => 'xml'
         );
+        //var_dump($data);
 
         $url = 'http://ws.correios.com.br/calculador/CalcPrecoprazo.aspx';
         $data = http_build_query($data);
@@ -128,11 +130,18 @@ class Cart extends Model {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $r = curl_exec($ch);
         $r = simplexml_load_string($r);
+        
+        echo $r->cServico->Valor;
 
         $array['price'] = current($r->cServico->Valor);
         $array['date'] = current($r->cServico->PrazoEntrega);
-
+        //var_dump($array);
+        //exit;
         return $array;
+        /*
+         * perdi um dia nesse cassilda
+         * o comprimento precisa ter no minimo 16cm e não dá erro nenhum simplesmente não funciona
+         */
     }
 
 }

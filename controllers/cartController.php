@@ -22,6 +22,7 @@ class cartController extends Controller {
 
         if (!empty($_POST['cep'])) {
             $cep = intval($_POST['cep']);
+            
 
             $shipping = $cart->shippingCalculate($cep);
             $_SESSION['shipping'] = $shipping;
