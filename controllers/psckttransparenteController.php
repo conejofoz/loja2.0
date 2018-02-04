@@ -20,15 +20,15 @@ class psckttransparenteController extends Controller {
         $products = new Products();
         $cart = new cart();
         $dados = $store->getTemplateData();
-        
+
         $list = $cart->getList();
         $total = 0;
-        foreach ($list as $item){
+        foreach ($list as $item) {
             $total += (floatval($item['price']) * intval($item['qt']));
         }
-        if(!empty($_SESSION['shipping'])){
+        if (!empty($_SESSION['shipping'])) {
             $shipping = $_SESSION['shipping'];
-            if(isset($shipping['price'])){
+            if (isset($shipping['price'])) {
                 $frete = floatval(str_replace(',', '.', $shipping['price']));
             } else {
                 $frete = 0;
@@ -36,7 +36,7 @@ class psckttransparenteController extends Controller {
             $total += $frete;
         }
         $dados['total'] = number_format($total, 2);
-        
+
 
         try {
             $sessionCode = \PagSeguro\Services\Session::create(
@@ -51,12 +51,15 @@ class psckttransparenteController extends Controller {
     }
 
     public function checkout() {
+        //echo "erro " . json_encode(array('error' => true, 'msg' => 'chegou no php'));
+            //exit;
         $users = new Users();
         $cart = new Cart();
         $purchases = new Purchases();
         $id = addslashes($_POST['id']);
         $name = addslashes($_POST['name']);
         $cpf = addslashes($_POST['cpf']);
+        $telefone = addslashes($_POST['telefone']);
         $email = addslashes($_POST['email']);
         $pass = addslashes($_POST['pass']);
         $cep = addslashes($_POST['cep']);
@@ -73,12 +76,14 @@ class psckttransparenteController extends Controller {
         $v_mes = addslashes($_POST['v_mes']);
         $v_ano = addslashes($_POST['v_ano']);
         $cartao_token = addslashes($_POST['cartao_token']);
-
+        $parc = explode(';', $_POST['parc']);
+        echo "chegou";
+        //exit;
         if ($users->emailExists($email)) {
             $uid = $users->validate($email, $pass);
 
             if (empty($uid)) {
-                $array = array('error'=>true, 'msg'=>'Email e/ou senha nao conferem');
+                $array = array('error' => true, 'msg' => 'Email e/ou senha nao conferem');
                 echo json_encode($array);
                 exit;
             }
@@ -87,23 +92,93 @@ class psckttransparenteController extends Controller {
         }
         $list = $cart->getList();
         $total = 0;
-        foreach ($list as $item){
+        foreach ($list as $item) {
             $total += (floatval($item['price']) * intval($item['qt']));
         }
-        if(!empty($_SESSION['shipping'])){
+        if (!empty($_SESSION['shipping'])) {
             $shipping = $_SESSION['shipping'];
-            if(isset($shipping['price'])){
+            if (isset($shipping['price'])) {
                 $frete = floatval(str_replace(',', '.', $shipping['price']));
             } else {
                 $frete = 0;
             }
             $total += $frete;
         }
+
+        try {
+            $id_purchase = $purchases->createPurchase($uid, $total, 'psckttransparente');
+        } catch (Exception $ex) {
+            echo "erro " . json_encode(array('error' => true, 'msg' => $ex->getMessage()));
+            exit;
+        }
+
+
+        try {
+            foreach ($list as $item) {
+                $purchases->addItem($id_purchase, $item['id'], $item['qt'], $item['price']);
+            }
+        } catch (Exception $ex) {
+            echo "erro " . json_encode(array('error' => true, 'msg' => $ex->getMessage()));
+            exit;
+        }
+
+
+
+        global $config;
+        $creditCard = new \PagSeguro\Domains\Requests\DirectPayment\CreditCard();
+        //$creditCard = new \PagSeguro\Domains\Requests\DirectPayment\Boleto();
+        $creditCard->setReceiverEmail($config['pagseguro_seller']);
+        $creditCard->setReference($id_purchase);
+        $creditCard->setCurrency("BRL");
+
+        /*
+         * Adicionar os ítens ao carrinho do PagSeguro
+         */
+        foreach ($list as $item) {
+            $creditCard->addItems()->withParameters(
+                    $item['id'], $item['name'], intval($item['qt']), floatval($item['price'])
+            );
+        }
+
+        $creditCard->setSender()->setName($name);
+        $creditCard->setSender()->setEmail($email);
+        $creditCard->setSender()->setDocument()->withParameters('CPF', $cpf);
+        $ddd = substr($telefone, 0, 2);
+        $telefone = substr($telefone, 2);
+        $creditCard->setSender()->setPhone()->withParameters($ddd, $telefone);
+
+        $creditCard->setSender()->setHash($id);
+        $ip = $_SERVER['REMOTE_ADDR'];
+        if (strlen($ip) < 9) {
+            $ip = '127.0.0.1';
+        }
+        $creditCard->setSender()->setIp($ip);
+
+        $creditCard->setShipping()->setAddress()->withParameters(
+                $rua, $numero, $bairro, $cep, $cidade, $estado, 'BRA', $complemento
+        );
         
-        $id_purchase = $purchases->createPurchase($uid, $total, 'psckttransparente');
+        $creditCard->setShipping()->setCost()->withParameters($frete);
         
-        foreach ($list as $item){
-            $purchases->addItem($id_purchase, $item['id'], $item['qt'], $item['price']);
+        
+        $creditCard->setBilling()->setAddress()->withParameters(
+                $rua, $numero, $bairro, $cep, $cidade, $estado, 'BRA', $complemento
+        );
+
+        $creditCard->setToken($cartao_token);
+        $creditCard->setInstallment()->withParameters($parc[0], $parc[1]);
+        $creditCard->setHolder()->setName($cartao_titular);
+        $creditCard->setHolder()->setDocument()->withParameters('CPF', $cartao_cpf);
+
+        $creditCard->setMode('DEFAULT');
+
+        try {
+            $result = $creditCard->register(\PagSeguro\Configuration\Configure::getAccountCredentials());
+            echo json_encode($result);
+            exit;
+        } catch (Exception $ex) {
+            echo "erro " . json_encode(array('error' => true, 'msg' => $ex->getMessage()));
+            exit;
         }
     }
 

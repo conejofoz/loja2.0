@@ -1,6 +1,6 @@
 <h1>Checkout transparente pagseguro</h1>
 
-<form>
+
     <h3>Dados pessoais</h3>
     
     <strong>Nome:</strong><br/>
@@ -8,6 +8,9 @@
     
     <strong>CPF</strong><br/>
     <input type="text" name="cpf" value="05347965401" /><br/><br/>
+    
+    <strong>Telefone</strong><br/>
+    <input type="text" name="telefone" value="4535274977" /><br/><br/>
     
     <strong>E-mail</strong><br/>
     <input type="email" name="email" value="c23364293093735324206@sandbox.pagseguro.com.br" /><br/><br/>
@@ -41,13 +44,13 @@
     <h3>Informacoes de pagamento</h3>
     
     <strong>Titular do Cartao</strong><br/>
-    <input type="text" name="cartao_titular" value=""/><br/><br/>
+    <input type="text" name="cartao_titular" value="SILVIO COELHO"/><br/><br/>
     
     <strong>CPF do titular do Cartao</strong><br/>
-    <input type="text" name="cartao_cpf" value=""/><br/><br/>
+    <input type="text" name="cartao_cpf" value="91389658953"/><br/><br/>
     
     <strong>Numero do Cartao</strong><br/>
-    <input type="text" name="cartao_numero" value=""/><br/><br/>
+    <input type="text" name="cartao_numero" value="4111111111111111"/><br/><br/>
     
     <strong>Codigo de Seguranca</strong><br/>
     <input type="text" name="cartao_cvv" value="123"/><br/><br/>
@@ -69,11 +72,13 @@
     <strong>Parcelas:</strong><br/>
     <select name="parc"></select>
     
-    <button class="button">Efetuar Compra</button>
+    <input type="hidden" name="total" value="<?php echo $total; ?>" />
+    
+    <button class="button efetuarCompra">Efetuar Compra</button>
     
     
     
-</form>
+
 
 <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/psckttransparente.js"></script>

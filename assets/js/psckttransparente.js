@@ -2,11 +2,13 @@ $(function(){
     
     
     $('.efetuarCompra').on('click', function(){
+        console.log("clicou");
         
         var id = PagSeguroDirectPayment.getSenderHash();
         
         var name = $('input[name=name]').val();
         var cpf = $('input[name=cpf]').val();
+        var telefone = $('input[name=telefone]').val();
         var email = $('input[name=email]').val();
         var pass = $('input[name=password]').val();
         var cep = $('input[name=cep]').val();
@@ -24,9 +26,11 @@ $(function(){
         var v_mes = $('select[name=cartao_mes]').val();
         var v_ano = $('select[name=cartao_ano]').val();
         
-        if(numero != '' && cvv != '' && v_mes != '' && v_ano != ''){
+        var parc = $('select[name=parc]').val();
+        console.log("setou as variaveis");
+        if(cartao_numero != '' && cvv != '' && v_mes != '' && v_ano != ''){
            PagSeguroDirectPayment.createCardToken({
-               cardNumber:numero,
+               cardNumber:cartao_numero,
                brand:window.cardBrand,
                cvv:cvv,
                expirationMonth:v_mes,
@@ -37,14 +41,18 @@ $(function(){
                   /*
                    * finalizar o pagamento usando ajax
                    */
+                  //BASE_URL = 'TESTE';
+                  console.log("chegou até antes do ajax");
+                  console.log("valor da base url: "+BASE_URL+'psckttransparente/checkout');
                   
                   $.ajax({
                       url:BASE_URL+'psckttransparente/checkout',
                       type:'POST',
                       data:{
-                          id:id, 
+                         id:id, 
                          name:name, 
                          cpf:cpf, 
+                         telefone:telefone, 
                          email:email, 
                          pass:pass, 
                          cep:cep, 
@@ -60,7 +68,8 @@ $(function(){
                          cvv:cvv, 
                          v_mes:v_mes, 
                          v_ano:v_ano,
-                         cartao_token:window.cardToken
+                         cartao_token:window.cardToken,
+                         parc:parc
                       },
                       dataType:'json',
                       success:function(json){
@@ -69,12 +78,13 @@ $(function(){
                          }
                       },
                       error:function(){
-                          
+                          console.log("erro no checkout");
                       }
                   });
                },
                error:function(r){
-                   
+                   console.log("nao foi possivel criar o token");
+                   console.log(r);
                },
                complete:function(r){
                    
@@ -99,9 +109,9 @@ $(function(){
                    $('input[name=cartao_cvv]').attr('maxlength', cvvLimit);
                    
                    PagSeguroDirectPayment.getInstallments({
-                       amount:100,
+                       amount:$('input[name=total]').val(),
                        brand:window.cardBrand,
-                       maxInstallmentNoInterest:10,
+                       //maxInstallmentNoInterest:10,
                        success:function(r){
                            if(r.error == false){
                                var parc = r.installments[window.cardBrand];

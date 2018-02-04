@@ -79,3 +79,230 @@
 03/02/2018 02:41:27 PagSeguro.Session[info]: Begin
 03/02/2018 02:41:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
 03/02/2018 02:41:28 PagSeguro.Session[info]: Session ID: 13adf094d17843a1a37b21bfef85f1b1
+03/02/2018 03:54:19 PagSeguro.Session[info]: Begin
+03/02/2018 03:54:20 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 03:54:20 PagSeguro.Session[info]: Session ID: 4b0b3ecc43de47a89c3f87e7041fa144
+03/02/2018 03:54:34 PagSeguro.Session[info]: Begin
+03/02/2018 03:54:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 03:54:34 PagSeguro.Session[info]: Session ID: ff5fa84a942147d4a643bc25bd1a9117
+03/02/2018 03:57:22 PagSeguro.Session[info]: Begin
+03/02/2018 03:57:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 03:57:23 PagSeguro.Session[info]: Session ID: fd67eebe131a486e9821c73e2718f3d3
+03/02/2018 21:25:32 PagSeguro.Session[info]: Begin
+03/02/2018 21:25:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 21:25:33 PagSeguro.Session[info]: Session ID: 1ae9d9b5f8d344f2bebf7fcd49717907
+03/02/2018 23:43:57 PagSeguro.Session[info]: Begin
+03/02/2018 23:43:57 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:43:57 PagSeguro.Session[info]: Session ID: f30f4dd1555240fb9f2a9f0899a3dfa6
+03/02/2018 23:47:03 PagSeguro.Session[info]: Begin
+03/02/2018 23:47:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:47:04 PagSeguro.Session[info]: Session ID: d7013fc79dcb4c69a26517b3d980f2f8
+03/02/2018 23:51:06 PagSeguro.Session[info]: Begin
+03/02/2018 23:51:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:51:07 PagSeguro.Session[info]: Session ID: 979fd84c35be498dbf6a92d098742432
+03/02/2018 23:51:10 PagSeguro.Session[info]: Begin
+03/02/2018 23:51:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:51:11 PagSeguro.Session[info]: Session ID: aa2f3ba882fb43cea4dbf133e496ff30
+03/02/2018 23:56:52 PagSeguro.Session[info]: Begin
+03/02/2018 23:56:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:56:53 PagSeguro.Session[info]: Session ID: 2f4d4eb890d549bc903aa0bcec717e1d
+03/02/2018 23:57:33 PagSeguro.Session[info]: Begin
+03/02/2018 23:57:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+03/02/2018 23:57:34 PagSeguro.Session[info]: Session ID: daf9019687284c24a20f2719e377f9e6
+04/02/2018 00:01:17 PagSeguro.Session[info]: Begin
+04/02/2018 00:01:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:01:18 PagSeguro.Session[info]: Session ID: 8975c0b58fec48f8907fed500301bf14
+04/02/2018 00:05:03 PagSeguro.Session[info]: Begin
+04/02/2018 00:05:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:05:04 PagSeguro.Session[info]: Session ID: f22f6bbd9d194f5eb4973a69b1fe54a2
+04/02/2018 00:06:18 PagSeguro.Session[info]: Begin
+04/02/2018 00:06:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:06:18 PagSeguro.Session[info]: Session ID: 71071579d5f04759b5e9275d4c993b41
+04/02/2018 00:07:41 PagSeguro.Session[info]: Begin
+04/02/2018 00:07:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:07:42 PagSeguro.Session[info]: Session ID: ae7339745fc64879bbd79061d21774e0
+04/02/2018 00:15:07 PagSeguro.Session[info]: Begin
+04/02/2018 00:15:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:15:08 PagSeguro.Session[info]: Session ID: 7767948e30e14655bb74529ee3bdfc70
+04/02/2018 00:15:43 PagSeguro.Session[info]: Begin
+04/02/2018 00:15:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:15:43 PagSeguro.Session[info]: Session ID: 0747f814c55f4219908a1b030b803479
+04/02/2018 00:24:47 PagSeguro.Session[info]: Begin
+04/02/2018 00:24:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:24:48 PagSeguro.Session[info]: Session ID: b2b18f67115546e28a6fd38a88f037a2
+04/02/2018 00:24:54 PagSeguro.Session[info]: Begin
+04/02/2018 00:24:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:24:54 PagSeguro.Session[info]: Session ID: 22fb313088fa46e6a3cdc00a99c20149
+04/02/2018 00:25:50 PagSeguro.Session[info]: Begin
+04/02/2018 00:25:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:25:50 PagSeguro.Session[info]: Session ID: 351d87ac5c744d059fc26d2a8fc70048
+04/02/2018 00:42:00 PagSeguro.Session[info]: Begin
+04/02/2018 00:42:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:42:00 PagSeguro.Session[info]: Session ID: 027dd0ddc50149dd84ed053145b47a93
+04/02/2018 00:46:51 PagSeguro.Session[info]: Begin
+04/02/2018 00:46:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:46:52 PagSeguro.Session[info]: Session ID: 25e12719596346b5813d4f6b39b0fce2
+04/02/2018 00:47:27 PagSeguro.Session[info]: Begin
+04/02/2018 00:47:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:47:27 PagSeguro.Session[info]: Session ID: da2df37bef194c29a137cb03a55c8e58
+04/02/2018 00:52:00 PagSeguro.Session[info]: Begin
+04/02/2018 00:52:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:52:00 PagSeguro.Session[info]: Session ID: 1c7f54c4055d4ea1a673469207915802
+04/02/2018 00:57:40 PagSeguro.Session[info]: Begin
+04/02/2018 00:57:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:57:41 PagSeguro.Session[info]: Session ID: f4ddec701cf94e9cb77daecb2a22f473
+04/02/2018 00:59:04 PagSeguro.Session[info]: Begin
+04/02/2018 00:59:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:59:05 PagSeguro.Session[info]: Session ID: c7afd25702f849f8a37b758c9c646f3b
+04/02/2018 00:59:51 PagSeguro.Session[info]: Begin
+04/02/2018 00:59:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 00:59:52 PagSeguro.Session[info]: Session ID: d8b31a74292948a08ad3c643b2f986b9
+04/02/2018 01:12:43 PagSeguro.Session[info]: Begin
+04/02/2018 01:12:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 01:12:44 PagSeguro.Session[info]: Session ID: 14439b72674d4a24b65540a7daee65bc
+04/02/2018 01:12:48 PagSeguro.Session[info]: Begin
+04/02/2018 01:12:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 01:12:48 PagSeguro.Session[info]: Session ID: dcd95bec4b1641489204cba115c439ed
+04/02/2018 01:13:09 PagSeguro.Session[info]: Begin
+04/02/2018 01:13:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 01:13:10 PagSeguro.Session[info]: Session ID: 26934a8d59ce4f48bc510be961f95eb0
+04/02/2018 19:36:22 PagSeguro.Session[info]: Begin
+04/02/2018 19:36:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:36:24 PagSeguro.Session[info]: Session ID: 946db1a83b754b2eab93a2d4922950d6
+04/02/2018 19:37:07 PagSeguro.Session[info]: Begin
+04/02/2018 19:37:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:37:08 PagSeguro.Session[info]: Session ID: 9c53e9539edf419c94ebfe3a4d54ced9
+04/02/2018 19:41:17 PagSeguro.Session[info]: Begin
+04/02/2018 19:41:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:41:18 PagSeguro.Session[info]: Session ID: 894594b702f84badb0034284ed10c6c2
+04/02/2018 19:41:42 PagSeguro.Session[info]: Begin
+04/02/2018 19:41:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:41:42 PagSeguro.Session[info]: Session ID: a605ff3fc76c41cc91d7830f62e7d1a1
+04/02/2018 19:46:17 PagSeguro.Session[info]: Begin
+04/02/2018 19:46:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:46:18 PagSeguro.Session[info]: Session ID: cf5f249358604e73b7b96ab298bb2581
+04/02/2018 19:47:23 PagSeguro.Session[info]: Begin
+04/02/2018 19:47:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:47:23 PagSeguro.Session[info]: Session ID: 5a21feed5f3a4dcbba10bff1ae0a9863
+04/02/2018 19:50:42 PagSeguro.Session[info]: Begin
+04/02/2018 19:50:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:50:43 PagSeguro.Session[info]: Session ID: 30bfbbdfd1e74d94b74fa80524bb24a6
+04/02/2018 19:51:16 PagSeguro.Session[info]: Begin
+04/02/2018 19:51:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:51:17 PagSeguro.Session[info]: Session ID: 74f1d0bda1d44564a352a66e466eb26d
+04/02/2018 19:52:41 PagSeguro.Session[info]: Begin
+04/02/2018 19:52:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:52:42 PagSeguro.Session[info]: Session ID: 23a7071583aa4a018b59d85bf724952b
+04/02/2018 19:53:16 PagSeguro.Session[info]: Begin
+04/02/2018 19:53:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 19:53:17 PagSeguro.Session[info]: Session ID: a151c77cd17f4d7db1535dfe465ee908
+04/02/2018 21:19:56 PagSeguro.Session[info]: Begin
+04/02/2018 21:19:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:19:57 PagSeguro.Session[info]: Session ID: b4d55b8cf89940848295239e03357ef5
+04/02/2018 21:20:25 PagSeguro.Session[info]: Begin
+04/02/2018 21:20:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:20:26 PagSeguro.Session[info]: Session ID: c6fb45ee84bc42f6bd8361dc0b48adc3
+04/02/2018 21:21:41 PagSeguro.Session[info]: Begin
+04/02/2018 21:21:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:21:42 PagSeguro.Session[info]: Session ID: 241b2da644864a86a03ebff1f75f59bf
+04/02/2018 21:22:05 PagSeguro.Session[info]: Begin
+04/02/2018 21:22:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:22:05 PagSeguro.Session[info]: Session ID: 27392f0ddbf34beeb6860390c88290cd
+04/02/2018 21:22:46 PagSeguro.Session[info]: Begin
+04/02/2018 21:22:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:22:46 PagSeguro.Session[info]: Session ID: b44740fc7d1841cdbf21992d7bacaca1
+04/02/2018 21:24:31 PagSeguro.Session[info]: Begin
+04/02/2018 21:24:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:24:31 PagSeguro.Session[info]: Session ID: 4a6708f5025e40edad190f5fc8e94c13
+04/02/2018 21:28:57 PagSeguro.Session[info]: Begin
+04/02/2018 21:28:57 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:28:57 PagSeguro.Session[info]: Session ID: 715d81f252d34920b3e5d5a895a085b6
+04/02/2018 21:29:23 PagSeguro.Session[info]: Begin
+04/02/2018 21:29:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:29:24 PagSeguro.Session[info]: Session ID: 65c7ad0c241549c5991a375ef0fb201d
+04/02/2018 21:33:53 PagSeguro.Session[info]: Begin
+04/02/2018 21:33:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:33:54 PagSeguro.Session[info]: Session ID: 453db4b0674e46a5b0f799e26a0750c6
+04/02/2018 21:35:15 PagSeguro.Session[info]: Begin
+04/02/2018 21:35:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:35:15 PagSeguro.Session[info]: Session ID: da590173b5a54065b4489724a6abd740
+04/02/2018 21:36:07 PagSeguro.Session[info]: Begin
+04/02/2018 21:36:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:36:07 PagSeguro.Session[info]: Session ID: df3f8d33b8e94bb9a6ff96de0cd9e5f1
+04/02/2018 21:36:47 PagSeguro.Session[info]: Begin
+04/02/2018 21:36:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:36:48 PagSeguro.Session[info]: Session ID: 6093dcaf00ed43e2aa58b1cc4c0a773c
+04/02/2018 21:47:00 PagSeguro.Session[info]: Begin
+04/02/2018 21:47:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:47:01 PagSeguro.Session[info]: Session ID: e1fbf5de31644d72adff36150644f11b
+04/02/2018 21:47:56 PagSeguro.Session[info]: Begin
+04/02/2018 21:47:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:47:57 PagSeguro.Session[info]: Session ID: 3ec59b3766704c4cad513bb3e187562a
+04/02/2018 21:49:33 PagSeguro.Session[info]: Begin
+04/02/2018 21:49:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:49:34 PagSeguro.Session[info]: Session ID: 7e6d0da1dc364287978143d7d37a423e
+04/02/2018 21:50:35 PagSeguro.Session[info]: Begin
+04/02/2018 21:50:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:50:36 PagSeguro.Session[info]: Session ID: f353099745a441c294fd05ba5fc53f62
+04/02/2018 21:50:58 PagSeguro.Session[info]: Begin
+04/02/2018 21:50:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:50:58 PagSeguro.Session[info]: Session ID: a267cfe8f988490c86a94006e0377a2b
+04/02/2018 21:51:32 PagSeguro.Session[info]: Begin
+04/02/2018 21:51:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:51:33 PagSeguro.Session[info]: Session ID: 59e944197f1048b09e6cb5e5e973e60c
+04/02/2018 21:54:16 PagSeguro.Session[info]: Begin
+04/02/2018 21:54:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 21:54:17 PagSeguro.Session[info]: Session ID: 5299e0787e5e44e6b77d4446413ddaac
+04/02/2018 22:07:06 PagSeguro.Session[info]: Begin
+04/02/2018 22:07:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:07:07 PagSeguro.Session[info]: Session ID: 8e99fa264aeb4248a0448e66018c74fd
+04/02/2018 22:09:20 PagSeguro.Session[info]: Begin
+04/02/2018 22:09:20 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:09:22 PagSeguro.Session[info]: Session ID: 7943e767742e4e94aa5df3115f2037f1
+04/02/2018 22:13:53 PagSeguro.Session[info]: Begin
+04/02/2018 22:13:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:13:54 PagSeguro.Session[info]: Session ID: 28ef58d4b23f4b2eb9fa6d1fafbf6c97
+04/02/2018 22:16:15 PagSeguro.Session[info]: Begin
+04/02/2018 22:16:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:16:16 PagSeguro.Session[info]: Session ID: 8f33c912d45d4f6f8d14a009cbcde55f
+04/02/2018 22:21:16 PagSeguro.Session[info]: Begin
+04/02/2018 22:21:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:21:16 PagSeguro.Session[info]: Session ID: 8ec75ec39b874fc0aaa1e75b2611f51a
+04/02/2018 22:22:23 PagSeguro.Session[info]: Begin
+04/02/2018 22:22:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:22:23 PagSeguro.Session[info]: Session ID: 4b3585b47e7f4b39bcbac5e71daf641f
+04/02/2018 22:22:41 PagSeguro.Session[info]: Begin
+04/02/2018 22:22:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:22:42 PagSeguro.Session[info]: Session ID: b477a4cb6e714921ba7f23f7700d9702
+04/02/2018 22:23:31 PagSeguro.Session[info]: Begin
+04/02/2018 22:23:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:23:31 PagSeguro.Session[info]: Session ID: 79abc088e39f472b83b41cad97d66fb4
+04/02/2018 22:24:29 PagSeguro.Session[info]: Begin
+04/02/2018 22:24:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:24:30 PagSeguro.Session[info]: Session ID: c7ab456e1eac49bfa5963fdec12969e0
+04/02/2018 22:25:00 PagSeguro.Session[info]: Begin
+04/02/2018 22:25:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:25:01 PagSeguro.Session[info]: Session ID: 758fe84ae6df49b38f222343078eacbe
+04/02/2018 22:27:06 PagSeguro.Session[info]: Begin
+04/02/2018 22:27:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:27:07 PagSeguro.Session[info]: Session ID: d3db9a3f96514a158e224b8121587739
+04/02/2018 22:28:49 PagSeguro.Session[info]: Begin
+04/02/2018 22:28:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:28:50 PagSeguro.Session[info]: Session ID: ce2596022db34e56a2fe24bd5e54f50f
+04/02/2018 22:31:21 PagSeguro.Session[info]: Begin
+04/02/2018 22:31:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:31:21 PagSeguro.Session[info]: Session ID: eb313f2fa4a3432a815d1336705c0213
+04/02/2018 22:38:11 PagSeguro.Session[info]: Begin
+04/02/2018 22:38:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:38:12 PagSeguro.Session[info]: Session ID: 9785f076546948a5b01aae13fc50ee42
+04/02/2018 22:38:34 PagSeguro.DirectPayment.CreditCard[info]: Begin
+04/02/2018 22:38:34 PagSeguro.DirectPayment.CreditCard[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/transactions/?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:38:34 PagSeguro.Checkout[info]: Params: {"reference":"2","billingAddressStreet":"Rua das Flores","billingAddressNumber":"320","billingAddressComplement":"casa","billingAddressCity":"Foz do Iguacu","billingAddressState":"PR","billingAddressDistrict":"Centro","billingAddressPostalCode":"85854516","billingAddressCountry":"BRA","currency":"BRL","creditCardHolderName":"SILVIO COELHO","creditCardHolderCPF":"91389658953","installmentQuantity":"1","installmentValue":"101.45","itemId1":2,"itemDescription1":"Mantegueira T1222","itemQuantity1":8,"itemAmount1":"10.00","paymentMethod":"creditCard","paymentMode":"DEFAULT","receiverEmail":"conejofoz@gmail.com","senderName":"Silvio Coelho","senderEmail":"c23364293093735324206@sandbox.pagseguro.com.br","senderAreaCode":"35","senderPhone":"(**) 27497-****","senderCPF":"053.***.***-**","senderIp":"127.0.0.1","senderHash":"9cdc282c00bf51b1d00d9b055988205b5a026256ffed53fef94c99fda0cd96ba","shippingCost":"21.45","shippingAddressStreet":"Rua das Flores","shippingAddressNumber":"320","shippingAddressComplement":"casa","shippingAddressCity":"Foz do Iguacu","shippingAddressState":"PR","shippingAddressDistrict":"Centro","shippingAddressPostalCode":"85854516","shippingAddressCountry":"BRA","creditCardToken":"b81bf465617645cb86a3eece7b69f230"}
+04/02/2018 22:38:34 PagSeguro.DirectPayment.CreditCard[error]: <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?><errors><error><code>53021</code><message>sender phone invalid value: 274977</message></error></errors>
+04/02/2018 22:39:52 PagSeguro.Session[info]: Begin
+04/02/2018 22:39:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:39:52 PagSeguro.Session[info]: Session ID: f1bd88e558e44a1aa78faefd669df389
+04/02/2018 22:40:24 PagSeguro.DirectPayment.CreditCard[info]: Begin
+04/02/2018 22:40:24 PagSeguro.DirectPayment.CreditCard[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/transactions/?email=conejofoz%40gmail.com&token=F22220377F0D4A14AD09BD227338F38C
+04/02/2018 22:40:24 PagSeguro.Checkout[info]: Params: {"reference":"3","billingAddressStreet":"Rua das Flores","billingAddressNumber":"320","billingAddressComplement":"casa","billingAddressCity":"Foz do Iguacu","billingAddressState":"PR","billingAddressDistrict":"Centro","billingAddressPostalCode":"85854516","billingAddressCountry":"BRA","currency":"BRL","creditCardHolderName":"SILVIO COELHO","creditCardHolderCPF":"91389658953","installmentQuantity":"1","installmentValue":"101.45","itemId1":2,"itemDescription1":"Mantegueira T1222","itemQuantity1":8,"itemAmount1":"10.00","paymentMethod":"creditCard","paymentMode":"DEFAULT","receiverEmail":"conejofoz@gmail.com","senderName":"Silvio Coelho","senderEmail":"c23364293093735324206@sandbox.pagseguro.com.br","senderAreaCode":"45","senderPhone":"(**) 3527-****","senderCPF":"053.***.***-**","senderIp":"127.0.0.1","senderHash":"515196bda2f814d08ee7941d341933d3f7a88cc38a8c827c5fd6d90c87676f3a","shippingCost":"21.45","shippingAddressStreet":"Rua das Flores","shippingAddressNumber":"320","shippingAddressComplement":"casa","shippingAddressCity":"Foz do Iguacu","shippingAddressState":"PR","shippingAddressDistrict":"Centro","shippingAddressPostalCode":"85854516","shippingAddressCountry":"BRA","creditCardToken":"ccf7ead381be4cb792cd18429a621bb1"}
+04/02/2018 22:40:26 PagSeguro.DirectPayment.CreditCard[info]: Credit Card Payment Code: 75F4A82E-ED75-43CD-8EF2-9E130BFC174D

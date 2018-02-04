@@ -42,6 +42,6 @@ class Users extends Model {
         $sql->bindValue(":email", $email);
         $sql->bindValue(":pass", $pass);
         $sql->execute();
-        return $this->db->lastInsert();
+        return $this->db->lastInsertId();
     }
 }
