@@ -77,8 +77,6 @@ class psckttransparenteController extends Controller {
         $v_ano = addslashes($_POST['v_ano']);
         $cartao_token = addslashes($_POST['cartao_token']);
         $parc = explode(';', $_POST['parc']);
-        echo "chegou";
-        //exit;
         if ($users->emailExists($email)) {
             $uid = $users->validate($email, $pass);
 

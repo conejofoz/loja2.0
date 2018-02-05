@@ -75,10 +75,12 @@ $(function(){
                       success:function(json){
                          if(json.error == true){
                              alert(json.msg);
+                         } else {
+                             console.log("Pagou...");
                          }
                       },
                       error:function(){
-                          console.log("erro no checkout");
+                          console.log("erro no checkout...");
                       }
                   });
                },
