@@ -27,4 +27,20 @@ class Purchases extends Model {
         $sql->execute();
         
     }
+    public function setPaid($id){
+        $sql = "UPDATE purchases SET payment_status = :status WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":status", '2');
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+        
+    }
+    public function setCancelled($id){
+        $sql = "UPDATE purchases SET payment_status = :status WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":status", '3');
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+        
+    }
 }

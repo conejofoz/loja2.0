@@ -18,7 +18,7 @@ class psckttransparenteController extends Controller {
     public function index() {
         $store = new Store();
         $products = new Products();
-        $cart = new cart();
+        $cart = new Cart();
         $dados = $store->getTemplateData();
 
         $list = $cart->getList();
@@ -52,7 +52,7 @@ class psckttransparenteController extends Controller {
 
     public function checkout() {
         //echo "erro " . json_encode(array('error' => true, 'msg' => 'chegou no php'));
-            //exit;
+        //exit;
         $users = new Users();
         $cart = new Cart();
         $purchases = new Purchases();
@@ -155,10 +155,10 @@ class psckttransparenteController extends Controller {
         $creditCard->setShipping()->setAddress()->withParameters(
                 $rua, $numero, $bairro, $cep, $cidade, $estado, 'BRA', $complemento
         );
-        
+
         $creditCard->setShipping()->setCost()->withParameters($frete);
-        
-        
+
+
         $creditCard->setBilling()->setAddress()->withParameters(
                 $rua, $numero, $bairro, $cep, $cidade, $estado, 'BRA', $complemento
         );
@@ -170,6 +170,8 @@ class psckttransparenteController extends Controller {
 
         $creditCard->setMode('DEFAULT');
 
+        $creditCard->setNotificationUrl(BASE_URL . "psckttransparente/notification");
+
         try {
             $result = $creditCard->register(\PagSeguro\Configuration\Configure::getAccountCredentials());
             echo json_encode($result);
@@ -177,6 +179,48 @@ class psckttransparenteController extends Controller {
         } catch (Exception $ex) {
             echo "erro " . json_encode(array('error' => true, 'msg' => $ex->getMessage()));
             exit;
+        }
+    }
+
+    public function obrigado() {
+        unset($_SESSION['cart']);
+        $store = new Store();
+        $dados = $store->getTemplateData();
+
+        $this->loadTemplate("psckttransparente_obrigado", $dados);
+    }
+
+    public function notification() {
+        $purchases = new Purchases();
+        
+        try {
+            if (\PagSeguro\Helpers\Xhr::hasPost()) {
+                $r = \PagSeguro\Services\Transactions\Notification::check(
+                                \PagSeguro\Configuration\Configure::getAccountCredentials()
+                );
+                
+                $ref = $r->getReference();
+                $status = $r->getStatus();
+                /*
+                 1 = Aguardando pagamento
+                 2 = Em análise
+                 3 = Paga
+                 4 = Disponível
+                 5 = Em disputa
+                 6 = Devolvida
+                 7 = Cancelada
+                 8 = Debitado
+                 9 = Retenção temporária 
+                 */
+                
+                if($status == 3){
+                    $purchases->setPaid($ref);
+                } elseif($status == 7){
+                    $purchases->setCancelled($ref);
+                }
+            }
+        } catch (Exception $e) {
+            
         }
     }
 

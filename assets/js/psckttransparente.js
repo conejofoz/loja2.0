@@ -77,6 +77,7 @@ $(function(){
                              alert(json.msg);
                          } else {
                              console.log("Pagou...");
+                             window.location.href = BASE_URL+"psckttransparente/obrigado";
                          }
                       },
                       error:function(){
