@@ -30,7 +30,7 @@
             <input type="hidden" name="id_product" value="<?php echo $product_info['id']?>" />
             <input type="hidden" name="qt_product" value="1" />
             <button data-action="decrease">-</button><input type="text" name="qt" value="1" class="addtocart_qt" disabled /><button data-action="increase">+</button>
-            <input class="addtocart_submit" type="submit" value="<?php $this->lang->get('ADD_TO_CART') ;?>" />
+            <input class="addtocart_submit bottom" type="submit" value="<?php $this->lang->get('ADD_TO_CART') ;?>" />
         </form>
     </div> 
 </div>

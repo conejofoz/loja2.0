@@ -20,11 +20,18 @@ class ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2
         ),
     );
 
+    public static $classMap = array (
+        'MP' => __DIR__ . '/..' . '/mercadopago/sdk/lib/mercadopago.php',
+        'MPRestClient' => __DIR__ . '/..' . '/mercadopago/sdk/lib/mercadopago.php',
+        'MercadoPagoException' => __DIR__ . '/..' . '/mercadopago/sdk/lib/mercadopago.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$classMap;
 
         }, null, ClassLoader::class);
     }

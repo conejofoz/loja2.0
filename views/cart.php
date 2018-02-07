@@ -40,7 +40,7 @@
             Qual seu CEP?<br/>
             <form method="POST">
                 <input type="number" name="cep" /><br/>
-                <input type="submit" value="Calcular" /><br/>
+                <input type="submit" value="Calcular" class="button" /><br/>
 
             </form>
             <?php endif; ?>
@@ -69,6 +69,7 @@ if($frete > 0): ?>
 <form method="POST" action="<?php echo BASE_URL ;?>cart/payment_redirect" style="float: right">
     <select name="payment_type">
         <option value="checkout_transparente">Pagseguro</option>
+        <option value="mp">Mercado Pago</option>
     </select>
     <input type="submit" value="Finalizar compra" class="button" />
 </form>
