@@ -137,8 +137,35 @@ class mpController extends Controller {
     }
 
     public function notificacao() {
+        $purchases = new Purchases();
         global $config;
         $mp = new MP($config['mp_appid'], $config['mp_key']);
+
+        $mp->sandbox_mode(false);
+
+        $info = $mp->get_payment($_GET['id']);
+
+        if ($info['status'] == '200') {
+            $array = $info['response'];
+            $ref = $array['collection']['external_reference'];
+            $status = $array['collection']['status'];
+            /*
+             * pending = Em análise
+             * approved = Aprovado
+             * in_procress = Em revisão
+             * in_mediation = Em processo de disputa
+             * rejected = Foi cancelado
+             * refunded = Reembolsado
+             * charged_back = Chargeback
+             */
+            if ($status == 'approved') {
+                $purchases->setPaid($ref);
+            } elseif ($status == 'cancelled') {
+                $purchases->setCancelled($ref);
+            }
+
+//file_put_contents('mlog.txt', print_r($array, true));
+        }
     }
 
 }
