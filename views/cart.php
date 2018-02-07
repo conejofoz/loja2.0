@@ -70,6 +70,7 @@ if($frete > 0): ?>
     <select name="payment_type">
         <option value="checkout_transparente">Pagseguro</option>
         <option value="mp">Mercado Pago</option>
+        <option value="paypal">Paypal</option>
     </select>
     <input type="submit" value="Finalizar compra" class="button" />
 </form>

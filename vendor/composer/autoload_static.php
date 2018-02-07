@@ -9,14 +9,29 @@ class ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'PagSeguro\\' => 10,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'PagSeguro\\' => 
         array (
             0 => __DIR__ . '/..' . '/pagseguro/pagseguro-php-sdk/source',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'P' => 
+        array (
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
+            ),
         ),
     );
 
@@ -31,6 +46,7 @@ class ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit091a10daf992e2ec4b5427f5eabbd5f2::$classMap;
 
         }, null, ClassLoader::class);
