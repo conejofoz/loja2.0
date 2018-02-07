@@ -85,8 +85,8 @@ class mpController extends Controller {
                     exit;
                 }
 
-
-                $mp = new MP('6255172869858654', 'mZa2sQbkdZQD6uSWlGvl8qz5RARqOlap');
+                global $config;
+                $mp = new MP($config['mp_appid'], $config['mp_key']);
 
                 $data = array(
                     'items' => array(),
@@ -102,7 +102,7 @@ class mpController extends Controller {
                         'pending' => BASE_URL . 'mp/obrigadoanalise',
                         'failure' => BASE_URL . 'mp/obrigadocancelado'
                     ),
-                    'notification' => BASE_URL . 'mp',
+                    'notification' => BASE_URL . 'mp/',
                     'auto_return' => 'all',
                     'external_reference' => $id_purchase
                 );
@@ -115,22 +115,30 @@ class mpController extends Controller {
                         'unit_price' => floatval($item['price'])
                     );
                 }
-                
+
                 $link = $mp->create_preference($data);
-                
-                /*echo '<pre>';
-                print_r($link);
-                exit;*/
+
+                /* echo '<pre>';
+                  print_r($link);
+                  exit; */
                 //$link = $link['init_point'];
-                $link = $link['sandbox_init_point'];
-                
-                header("Location: ".$link);
-                exit;
-                
+
+                if ($link['status'] == '201') {
+                    $link = $link['response']['init_point'];
+                    header("Location: " . $link);
+                    exit;
+                } else {
+                    $dados['error'] = 'Tente novamente mais tarde!';
+                }
             }
         }
 
         $this->loadTemplate('cart_mp', $dados);
+    }
+
+    public function notificacao() {
+        global $config;
+        $mp = new MP($config['mp_appid'], $config['mp_key']);
     }
 
 }
