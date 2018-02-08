@@ -1,4 +1,4 @@
-<h1>Carrinho Mercado Pago</h1>
+<h1>Carrinho Paypal</h1>
 <?php if(!empty($error)) : ?>
 <div class="warn">
     <?php echo $error;?>

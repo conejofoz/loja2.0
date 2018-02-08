@@ -92,57 +92,90 @@ class paypalController extends Controller {
                         $config['paypal_clientid'], $config['paypal_secret']
                         )
                 );
-                
+
                 $payer = new \PayPal\Api\Payer();
                 $payer->setPaymentMethod('paypal');
-                
+
                 $amount = new \PayPal\Api\Amount();
                 $amount->setCurrency('BRL')->setTotal($total);
-                
+
                 $transaction = new \PayPal\Api\Transaction();
                 $transaction->setAmount($amount);
                 $transaction->setInvoiceNumber($id_purchase);
-                
+
                 $redirectUrls = new \PayPal\Api\RedirectUrls();
-                $redirectUrls->setReturnUrl(BASE_URL.'paypal/obrigado');
-                $redirectUrls->setCancelUrl(BASE_URL.'paypal/cancelou');
-                
+                $redirectUrls->setReturnUrl(BASE_URL . 'paypal/obrigado');
+                $redirectUrls->setCancelUrl(BASE_URL . 'paypal/cancelou');
+
                 $payment = new \PayPal\Api\Payment();
                 $payment->setIntent('sale');
                 $payment->setPayer($payer);
                 $payment->setTransactions(array($transaction));
                 $payment->setRedirectUrls($redirectUrls);
-                
-                try{
+
+                try {
                     $payment->create($apiContext);
-                    header("Location: ".$payment->getApprovalLink());
+                    header("Location: " . $payment->getApprovalLink());
                     exit;
                 } catch (\PayPal\Exception\PayPalConnectionException $e) {
                     echo $e->getData();
                     exit;
-
                 }
             }
         }
 
         $this->loadTemplate('cart_paypal', $dados);
     }
-    
-    
-    
-    
-    
-    public function obrigado(){
-        
+
+    public function obrigado() {
+        $purchases = new Purchases();
+        global $config;
+
+        $apiContext = new \PayPal\Rest\ApiContext(
+                new \PayPal\Auth\OAuthTokenCredential(
+                $config['paypal_clientid'], $config['paypal_secret']
+                )
+        );
+        $paymentId = $_GET['paymentId'];
+        $payment = \PayPal\Api\Payment::get($paymentId, $apiContext);
+        $execution = new \PayPal\Api\PaymentExecution();
+        $execution->setPayerId($_GET['PayerID']);
+
+        try {
+            $result = $payment->execute($execution, $apiContext);
+            try {
+                $payment = \PayPal\Api\Payment::get($paymentId, $apiContext);
+                $status = $payment->getState();
+                $t = current($payment->getTransactions());
+                $t = $t->toArray();
+                $ref = $t['invoice_number'];
+                if ($status == 'aproved') {
+                    $purchases->setPaid($ref);
+                    unset($_SESSION['cart']);
+                    $store = new Store();
+                    $dados = $store->getTemplateData();
+                    $this->loadTemplate('paypal_obrigado', $dados);
+                } else {
+                    $purchases->setCancelled($ref);
+                    header("Location: " . BASE_URL . "paypal/cancelar");
+                    exit;
+                }
+            } catch (Exception $ex) {
+                header("Location: " . BASE_URL . "paypal/cancelar");
+                exit;
+            }
+        } catch (Exception $ex) {
+            header("Location: " . BASE_URL . "paypal/cancelar");
+            exit;
+        }
     }
-    
-    
-    public function cancelar(){
-        unset($_SESSION['cart']) ;
-        
+
+    public function cancelar() {
+        unset($_SESSION['cart']);
+
         $store = new Store();
         $dados = $store->getTemplateData();
-        
+
         $this->loadTemplate('paypal_cancelar', $dados);
     }
 
