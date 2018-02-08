@@ -6,7 +6,8 @@
  * @copyright (c) year, Silvio Coelho CURSO UPINSIDE TECNOLOGIA
  */
 class paypalController extends Controller {
-        private $user;
+
+    private $user;
 
     public function __construct() {
         parent::__construct();
@@ -66,7 +67,7 @@ class paypalController extends Controller {
                 }
 
                 try {
-                    $id_purchase = $purchases->createPurchase($uid, $total, 'mp');
+                    $id_purchase = $purchases->createPurchase($uid, $total, 'paypal');
                 } catch (Exception $ex) {
                     $dados['error'] = $ex->getMessage();
                     exit;
@@ -86,14 +87,63 @@ class paypalController extends Controller {
                 /*
                  * integração paypal
                  */
+                $apiContext = new \PayPal\Rest\ApiContext(
+                        new \PayPal\Auth\OAuthTokenCredential(
+                        $config['paypal_clientid'], $config['paypal_secret']
+                        )
+                );
                 
+                $payer = new \PayPal\Api\Payer();
+                $payer->setPaymentMethod('paypal');
                 
+                $amount = new \PayPal\Api\Amount();
+                $amount->setCurrency('BRL')->setTotal($total);
+                
+                $transaction = new \PayPal\Api\Transaction();
+                $transaction->setAmount($amount);
+                $transaction->setInvoiceNumber($id_purchase);
+                
+                $redirectUrls = new \PayPal\Api\RedirectUrls();
+                $redirectUrls->setReturnUrl(BASE_URL.'paypal/obrigado');
+                $redirectUrls->setCancelUrl(BASE_URL.'paypal/cancelou');
+                
+                $payment = new \PayPal\Api\Payment();
+                $payment->setIntent('sale');
+                $payment->setPayer($payer);
+                $payment->setTransactions(array($transaction));
+                $payment->setRedirectUrls($redirectUrls);
+                
+                try{
+                    $payment->create($apiContext);
+                    header("Location: ".$payment->getApprovalLink());
+                    exit;
+                } catch (\PayPal\Exception\PayPalConnectionException $e) {
+                    echo $e->getData();
+                    exit;
+
+                }
             }
         }
 
         $this->loadTemplate('cart_paypal', $dados);
     }
-
-
+    
+    
+    
+    
+    
+    public function obrigado(){
+        
+    }
+    
+    
+    public function cancelar(){
+        unset($_SESSION['cart']) ;
+        
+        $store = new Store();
+        $dados = $store->getTemplateData();
+        
+        $this->loadTemplate('paypal_cancelar', $dados);
+    }
 
 }
