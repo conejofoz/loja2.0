@@ -181,6 +181,38 @@ class boletoController extends Controller {
     }
 
     public function notificacao() {
+        global $config;
+        $options = array(
+                    'client_id' => $config['gerencianet_clientid'],
+                    'client_secret' => $config['gerencianet_clientsecret'],
+                    'sandbox' => $config['gerencianet_sandbox']
+                );
+        
+        $token = $_POST['notification'];
+        $params = array(
+           'token' => $token 
+        );
+        
+        try{
+            $api = new \Gerencianet\Gerencianet($options);
+            $c = $api->getNotification($params, array());
+            
+            $ultimo = end($c['data']);
+            
+            $custom_id = $ultimo['custom_id'];
+            $status = $ultimo['status']['current'];
+            
+            if($status == 'paid'){
+                $purchases = new Purchases();
+                $purchases->setPaid($custom_id);
+            }
+            
+        } catch (Exception $ex) {
+            echo "ERRO: ";
+                    print_r($ex->getMessage());
+                    exit;
+
+        }
         
     }
 
